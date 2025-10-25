@@ -1,4 +1,4 @@
-package com.tren.transporte3.model;
+package com.adopta.service.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,4 +23,7 @@ public class mascota {
     private String nombre;
     private String nombrecorte;
     private LocalDate fechaingreso;
+
+
+
 }

@@ -1,4 +1,10 @@
 package com.adopta.service.exception;
 
-public class filestorageexception {
+public class FileStorageException extends RuntimeException{
+    public FileStorageException(String message) {
+        super(message);
+    }
+    public FileStorageException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }
