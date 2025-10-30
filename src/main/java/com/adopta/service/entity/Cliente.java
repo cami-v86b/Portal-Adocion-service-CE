@@ -19,6 +19,10 @@ public class Cliente {
     private String email;
     private String clave;
     private boolean vigencia;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "imagen_id")
+    private DocumentoAlmacenado imagen;
+
 
 
 }

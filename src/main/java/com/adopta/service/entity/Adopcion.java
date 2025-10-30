@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-public class adopcion {
+public class Adopcion {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private LocalDate fechainicio;
     private String descripcion;

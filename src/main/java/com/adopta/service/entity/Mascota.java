@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-public class mascota {
+public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id" , nullable = false)
@@ -22,8 +22,12 @@ public class mascota {
     private String color;
     private String nombre;
     private String nombrecorte;
-    private LocalDate fechaingreso;
-
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "checkadoptado_id")
+    private Adopcion checkadoptado;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "imagen_id")
+    private DocumentoAlmacenado imagen;
 
 
 }

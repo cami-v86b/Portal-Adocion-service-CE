@@ -3,14 +3,13 @@ package com.adopta.service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class duenorefugio {
+public class DuenoRefugio {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name="id",nullable=false)
@@ -21,6 +20,9 @@ public class duenorefugio {
     private String correo;
     private String refugio;
     private boolean vigencia;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "checkmascota")
+    private Mascota checkmascota;
 
 
 
